@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wise Wave </title>
+    <link rel="icon" href="path/to/WiseWave AI.png" type="image/png"> <!-- Favicon link -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #passwordForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #content {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        input[type="password"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #error {
+            color: red;
+            display: none;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="passwordForm">
+    <h2>Enter Password to Access the Chat</h2>
+    <input type="password" id="password" placeholder="Password">
+    <input type="submit" value="Submit" onclick="checkPassword()">
+    <div id="error">Incorrect password. Please try again.</div>
+</div>
+
+<div id="content">
+    <iframe src="https://chat.1410inc.xyz/?room=Wise_Wave_lliwjzrh1x" allow="camera; microphone; fullscreen"></iframe>
+</div>
+
+<script>
+    function checkPassword() {
+        var password = document.getElementById("password").value;
+        if (password === "wise121502x") {
+            document.getElementById('passwordForm').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        } else {
+            document.getElementById('error').style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
